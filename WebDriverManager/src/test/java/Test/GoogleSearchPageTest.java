@@ -11,15 +11,18 @@ public class GoogleSearchPageTest {
 	private static WebDriver driver = null;
 
 	public static void main(String[] args) throws InterruptedException {
+		SetUpDriver();
 		GoogleSearchTest();
 	}
 	
+	
 	public static void GoogleSearchTest() throws InterruptedException {		
-		SetUpDriver();
 		GoogleSearchPageObject searchPageObject = new GoogleSearchPageObject(driver);
 		searchPageObject.setTextInSearchBox("A B C D");
 		Thread.sleep(3000);
 		searchPageObject.ClickSearchButton();
+		Thread.sleep(3000);
+		driver.close();
 	};
 	
 

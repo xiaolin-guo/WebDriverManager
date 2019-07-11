@@ -24,4 +24,13 @@ public class GoogleSearchPageObject {
 	public void ClickSearchButton() {
 		driver.findElement(search_button).click();
 	};
+	
+	public void EnterReturnKey() {
+		driver.findElement(textbox_search).sendKeys(Keys.RETURN);
+	};
+	
+	public void ClearSearchBox() {
+		driver.findElement(textbox_search).clear();
+		
+	};
 }
